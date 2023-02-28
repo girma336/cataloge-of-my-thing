@@ -86,10 +86,10 @@ class AlbumGenre
   def validate_date(string)
     format_ok = string.match(/\d{4}-\d{2}-\d{2}/)
     parseable = begin
-                  Date.strptime(string, '%Y-%m-%d')
+      Date.strptime(string, '%Y-%m-%d')
                 rescue StandardError
                   false
-                end
+    end
 
     if string == 'never' || format_ok && parseable
       true
