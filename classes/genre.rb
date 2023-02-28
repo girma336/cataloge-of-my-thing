@@ -2,8 +2,8 @@ class Genre
   attr_accessor :name
   attr_reader :id, :items
 
-  def initialze(name)
-    @id = Randome.rand(1...1000)
+  def initialize(name)
+    @id = Random.rand(1...1000)
     @name = name
     @items = []
   end
@@ -11,5 +11,13 @@ class Genre
   def add_item(item)
     @items << item
     item.add_genre(self)
+  end
+
+  def to_json(*_args)
+    {
+      'id' => @id,
+      'name' => @name,
+      'items' => @items
+    }
   end
 end
