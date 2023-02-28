@@ -18,7 +18,6 @@ class Item
     @lable = lable
   end
  
-
   def move_to_archive()
     @archived = can_be_archived?
   end
