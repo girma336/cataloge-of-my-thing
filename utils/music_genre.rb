@@ -45,12 +45,7 @@ class AlbumGenre
   def add_music_albume
     print 'Publish Date: '
     publi_date = gets.chomp
-    until validate_date(publi_date)
-      puts 'please insert in this 2023-12-03'
-      print 'Publish Date: '
-      publi_date = gets.chomp
-    end
-
+    correct_format(publi_date)
     print 'Music albume is spotify or not [y/n]: '
     value = gets.chomp.capitalize
     case value
@@ -100,6 +95,14 @@ class AlbumGenre
       true
     else
       false
+    end
+  end
+
+  def correct_format(publi_date)
+    until validate_date(publi_date)
+      puts 'please insert in this 2023-12-03'
+      print 'Publish Date: '
+      publi_date = gets.chomp
     end
   end
 end
