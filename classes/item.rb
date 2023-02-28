@@ -14,13 +14,10 @@ class Item
     genre.items.push(self) unless genre.items.include?(self)
   end
 
-  def add_lebal(lable)
-    @lable = lable
-  end
-
   def add_label(lable)
     @lable = lable
   end
+ 
 
   def move_to_archive()
     @archived = can_be_archived?
