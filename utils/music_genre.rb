@@ -45,7 +45,6 @@ class AlbumGenre
   def add_music_albume
     print 'Publish Date: '
     publi_date = gets.chomp
-    correct_format(publi_date)
     print 'Music albume is spotify or not [y/n]: '
     value = gets.chomp.capitalize
     case value
@@ -81,28 +80,5 @@ class AlbumGenre
     end
     puts 'No list of gener' if @genre.empty?
     puts ' '
-  end
-
-  def validate_date(string)
-    format_ok = string.match(/\d{4}-\d{2}-\d{2}/)
-    parseable = begin
-      Date.strptime(string, '%Y-%m-%d')
-                rescue StandardError
-                  false
-    end
-
-    if string == 'never' || format_ok && parseable
-      true
-    else
-      false
-    end
-  end
-
-  def correct_format(publi_date)
-    until validate_date(publi_date)
-      puts 'please insert in this 2023-12-03'
-      print 'Publish Date: '
-      publi_date = gets.chomp
-    end
   end
 end
