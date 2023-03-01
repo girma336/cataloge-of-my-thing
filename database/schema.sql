@@ -5,6 +5,19 @@ CREATE TABLE labels (
   color VARCHAR(200) NOT NULL
 )
 
+DROP TABLE IF EXISTS books
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL,
+  genre_id INT,
+  author_id INT,
+  label_id INT,
+  FOREIGN KEY (genre_id) REFERENCES genres(id),
+  FOREIGN KEY (author_id) REFERENCES authors(id),
+  FOREIGN KEY (label_id) REFERENCES labels(id)  
+)
+
 DROP TABLE IF EXISTS genre
 CREATE TABLE genre (
     id SERIAL NOT NULL PRIMARY key,
