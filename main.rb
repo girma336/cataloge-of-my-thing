@@ -1,7 +1,10 @@
 require_relative 'utils/music_genre'
+require_relative 'utils/book_label'
+
 class App
   def initialize
     @albums = AlbumGenre.new
+    @books = BookLabel.new
   end
 
   def select_one_activity(input)
@@ -12,6 +15,12 @@ class App
       @albums.list_all_genre
     when 8
       @albums.add_music_albume
+    when 1
+      @books.list_all_book
+    when 5
+      @books.list_all_label
+    when 7
+      @books.add_book_label
     end
   end
 end
