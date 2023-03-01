@@ -34,7 +34,7 @@ def main
     puts '  9:- Add a game'
     puts '  10:- Exit'
     input = gets.chop.to_i
-    puts 'Invalid choice, please select a number from [1..10]' if input < 1 || input > 13
+    puts 'Invalid choice, please select a number from [1..10]' if input < 1 || input > 10
     app.select_one_activity(input)
   end
 end

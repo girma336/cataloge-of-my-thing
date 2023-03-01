@@ -4,6 +4,8 @@ require_relative '../classes/musicalbum'
 require_relative '../classes/genre'
 
 class AlbumGenre
+  attr_accessor :albums, :genre
+
   FILE_ALBUM = 'data/musicalbum.json'.freeze
   FILE_GENRE = 'data/genre.json'.freeze
   def initialize
@@ -45,7 +47,7 @@ class AlbumGenre
   def add_music_albume
     print 'Publish Date: '
     publi_date = gets.chomp
-    print 'Music albume is spotify or not [y/n]: '
+    print 'Music albume is spotify or not [Y/N]: '
     value = gets.chomp.capitalize
     case value
     when 'Y'
@@ -53,7 +55,7 @@ class AlbumGenre
     when 'N'
       value = false
     else
-      puts ['please inter the correct input ether y or n']
+      puts ['please Enter the correct input ether y or n']
       value = gets.chomp.capitalize
     end
 
@@ -64,6 +66,10 @@ class AlbumGenre
     @genre << Genre.new(name_genre).to_json
     save_genre_album
     puts ['', 'Music Album Succesfuly added !!!', ' ']
+  end
+
+  def count(list)
+    list.size
   end
 
   def list_all_album
