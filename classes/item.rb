@@ -1,5 +1,5 @@
 require 'date'
-# require_relative 'genre'
+
 class Item
   attr_writer :genre, :author, :source, :lable
   attr_reader :id, :archived
