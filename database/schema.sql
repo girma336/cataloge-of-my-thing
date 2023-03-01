@@ -13,7 +13,7 @@ CREATE TABLE books (
   genre_id INT,
   author_id INT,
   label_id INT,
-  FOREIGN KEY (genre_id) REFERENCES genres(id),
+  FOREIGN KEY (genre_id) REFERENCES genre(id),
   FOREIGN KEY (author_id) REFERENCES authors(id),
   FOREIGN KEY (label_id) REFERENCES labels(id)  
 )
