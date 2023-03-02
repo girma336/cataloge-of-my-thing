@@ -35,15 +35,14 @@ CREATE TABLE item(
   publish_date DATA NOT NULL,
   archived BOOLEAN,
   genre_id INT,
-  CONSTRAINT fk_genre_id FOREIGN KEY(genre_id) REFERENCES genre(id),
-  musicalbum_id INT,
-  CONSTRAINT fk_musicalbum_id FOREIGN KEY(musicalbum_id) REFERENCES musicalbum(id),
   author_id INT,
-  FOREIGN KEY (author_id) REFERENCES authors(id),
   label_id INT,
+  CONSTRAINT fk_genre_id FOREIGN KEY(genre_id) REFERENCES genre(id),
+  FOREIGN KEY (author_id) REFERENCES authors(id),
   FOREIGN KEY (label_id) REFERENCES labels(id)  
 )
 
-CREATE INDEX labels_id_asc ON labels(id ASC);
-CREATE INDEX kfk_genre ON item(genre_id);
-CREATE INDEX Kfk_item_type ON item(item_type_id);
+CREATE INDEX labels_index ON item(label_id);
+CREATE INDEX genres_index ON item(genre_id);
+CREATE INDEX authers_index ON item(author_id)
+
