@@ -9,7 +9,7 @@ class Game < Item
     super(id, publish_date, archived: archived)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
-end
+  end
 
   def to_json(*_args)
     {
