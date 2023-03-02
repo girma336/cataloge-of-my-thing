@@ -57,9 +57,6 @@ In order to run this project you need:
 - Download Visual Studio Code.
 - Download Git.
 
-### Presentation
-[Girma-Tarekegn](https://www.loom.com/share/1b566fa2407545f9b1a9b403ae2c374e)
-
 ### Setup
 
 Clone this repository to your desired folder:
@@ -101,6 +98,7 @@ Clone this repository to your desired folder:
 
 - GitHub: [Girma-Tarekegn](https://github.com/girma336)
 - LinkedIn: [Girma-Tarekegn](https://www.linkedin.com/in/girma-tarekegn/)
+- Presentation: [Video](https://www.loom.com/share/1b566fa2407545f9b1a9b403ae2c374e)
 
 👤 ****
 
