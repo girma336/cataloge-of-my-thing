@@ -66,7 +66,7 @@ class BookLabel
     @books.each_with_index do |book, index|
       print "(#{index})   Publish date: #{book['publish_date']}
       Book Publisher:  #{book['publisher']}
-      Book Cover_state:  #{book['cover_state']} "
+      Book Cover_state:  #{book['cover_state']}\n"
     end
     puts 'No List of Book Exists ' if @books.empty?
     puts ' '

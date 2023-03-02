@@ -7,29 +7,29 @@ CREATE TABLE labels (
 
 DROP TABLE IF EXISTS genre
 CREATE TABLE genre (
-    id SERIAL  PRIMARY key,
-    name VARCHAR(100) NOT NULL
+  id SERIAL  PRIMARY key,
+  name VARCHAR(100) NOT NULL
 )
 
-DROP TABLE IF EXISTS itemType
-CREATE TABLE itemType (
-    id SERIAL  PRIMARY key,
-    name VARCHAR(100)
+DROP TABLE IF EXISTS musicalbum
+CREATE TABLE musicalbum (
+  id SERIAL  PRIMARY key,
+  on_spotify BOOLEAN,
 )
 
 DROP TABLE IF EXISTS item
 CREATE TABLE item(
-    id SERIAL  PRIMARY key,
-    publish_date DATA NOT NULL,
-    archived BOOLEAN,
-    genre_id INT,
-    CONSTRAINT fk_genre_id FOREIGN KEY(genre_id) REFERENCES genre(id),
-    item_type_id INT,
-    CONSTRAINT fk_itemtype_id FOREIGN KEY(item_type_id) REFERENCES itemType(id),
-    author_id INT,
-    FOREIGN KEY (author_id) REFERENCES authors(id),
-    label_id INT,
-    FOREIGN KEY (label_id) REFERENCES labels(id)  
+  id SERIAL  PRIMARY key,
+  publish_date DATA NOT NULL,
+  archived BOOLEAN,
+  genre_id INT,
+  CONSTRAINT fk_genre_id FOREIGN KEY(genre_id) REFERENCES genre(id),
+  musicalbum_id INT,
+  CONSTRAINT fk_musicalbum_id FOREIGN KEY(musicalbum_id) REFERENCES musicalbum(id),
+  author_id INT,
+  FOREIGN KEY (author_id) REFERENCES authors(id),
+  label_id INT,
+  FOREIGN KEY (label_id) REFERENCES labels(id)  
 )
 
 CREATE INDEX labels_id_asc ON labels(id ASC);
