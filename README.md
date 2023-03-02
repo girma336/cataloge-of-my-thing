@@ -4,22 +4,23 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Catalog of my things ](#-catalog-of-my-things-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Presentation](#presentation)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -100,10 +101,10 @@ Clone this repository to your desired folder:
 - LinkedIn: [Girma-Tarekegn](https://www.linkedin.com/in/girma-tarekegn/)
 - Presentation: [Video](https://www.loom.com/share/1b566fa2407545f9b1a9b403ae2c374e)
 
-👤 ****
+👤 **Bright Kportiklah**
 
-- GitHub:    
-- LinkedIn: 
+- GitHub: [@BryteLitty](https://github.com/Bryte)
+- LinkedIn: [Bright Kportiklah](https://www.linkedin.com/in/bright-kportiklah-05512418a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

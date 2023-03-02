@@ -22,6 +22,14 @@ class Game < Item
   private
 
   def can_be_archived?
-    (super && (Time.now - @last_played_at) > (2 * 365 * 24 * 60 * 60))
+    today_date = Date.today.strftime('%Y-%m-%d')
+
+    parsed = Date.parse(today_date)
+
+    last_played_date = Date.parse(@last_played_at)
+
+    difference_in_years = (parsed.year - last_played_date.year).to_i
+
+    super && (difference_in_years > 2)
   end
 end
