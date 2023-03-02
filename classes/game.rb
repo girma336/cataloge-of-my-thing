@@ -1,7 +1,6 @@
 require_relative 'item'
 require 'date'
 
-
 class Game < Item
   attr_accessor :multiplayer, :last_played_at
   attr_reader :id
@@ -12,20 +11,18 @@ class Game < Item
     @last_played_at = last_played_at
 end
 
-def to_json(*_args)
-  {
+  def to_json(*_args)
+    {
       'publish_date' => @publish_date,
       'multiplayer' => @multiplayer,
-      'publish_date' => @publish_date
+      'last_played_at' => @last_played_at,
       'archived' => @archived
-  }
-end
-  
+    }
+  end
+
   private
-  
+
   def can_be_archived?
     (super && (Time.now - @last_played_at) > (2 * 365 * 24 * 60 * 60))
   end
-
-
 end

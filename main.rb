@@ -1,10 +1,12 @@
 require_relative 'utils/music_genre'
 require_relative 'utils/book_label'
+require_relative 'utils/game_author'
 
 class App
   def initialize
     @albums = AlbumGenre.new
     @books = BookLabel.new
+    @games = GameAuthor.new
   end
 
   def select_one_activity(input)
@@ -21,6 +23,12 @@ class App
       @books.list_all_label
     when 7
       @books.add_book_label
+    when 3
+      @games.list_all_games
+    when 6
+      @games.list_all_authors
+    when 9
+      @games.add_game
     end
   end
 end
