@@ -54,20 +54,25 @@ class GameAuthor
   end
 
   def add_game
-    puts 'Publise date:'
+    print 'Publise date: '
     publish_date = gets.chomp
-    puts 'Mulltiplayer:'
+    print 'Mulltiplayer: '
     multiplayer = gets.chomp
-    puts 'last_played_at (input date as: yyyy-mm-dd):'
+    print 'last_played_at (input date as: yyyy-mm-dd): '
     last_played_at = gets.chomp
+    print 'First Name: '
+    f_name = gets.chomp.capitalize
+    print 'Last Name: '
+    l_name = gets.chomp.capitalize
     @games << Game.new(publish_date, multiplayer, last_played_at).to_json
+    @authors << Author.new(f_name, l_name).to_json
+    save_game_author
     puts ['... Game added added succesfully! ']
   end
 
   def list_all_authors
     @authors.each_with_index do |author, index|
-      puts "(#{index}) First Title: #{author['first_name']}
-            Last Name: #{author['last_name']}"
+      puts "(#{index}) Full Name : #{author['first_name']} #{author['last_name']}"
     end
     puts 'No list of authors exist' if @authors.empty?
     puts ''

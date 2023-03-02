@@ -9,24 +9,24 @@ class App
     @games = GameAuthor.new
   end
 
-  def select_one_activity(input)
+  def select_one(input)
     case input
-    when 2
-      @albums.list_all_album
-    when 4
-      @albums.list_all_genre
-    when 8
-      @albums.add_music_albume
     when 1
       @books.list_all_book
-    when 5
-      @books.list_all_label
-    when 7
-      @books.add_book_label
+    when 2
+      @albums.list_all_album
     when 3
       @games.list_all_games
+    when 4
+      @albums.list_all_genre
+    when 5
+      @books.list_all_label
     when 6
       @games.list_all_authors
+    when 7
+      @books.add_book_label
+    when 8
+      @albums.add_music_albume
     when 9
       @games.add_game
     end
@@ -52,7 +52,7 @@ def main
     puts '  10:- Exit'
     input = gets.chop.to_i
     puts 'Invalid choice, please select a number from [1..10]' if input < 1 || input > 10
-    app.select_one_activity(input)
+    app.select_one(input)
   end
 end
 main
