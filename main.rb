@@ -21,6 +21,11 @@ class App
       @albums.list_all_genre
     when 5
       @books.list_all_label
+    end
+  end
+
+  def select_two(input)
+    case input
     when 6
       @games.list_all_authors
     when 7
@@ -53,6 +58,7 @@ def main
     input = gets.chop.to_i
     puts 'Invalid choice, please select a number from [1..10]' if input < 1 || input > 10
     app.select_one(input)
+    app.select_two(input)
   end
 end
 main
