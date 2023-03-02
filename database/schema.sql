@@ -42,6 +42,23 @@ CREATE TABLE item(
   FOREIGN KEY (label_id) REFERENCES labels(id)  
 )
 
+DROP TABLE IF EXISTS authors 
+CREATE TABLE authors (
+  id SERIAL PRIMARY KEY, 
+  first_name VARCHAR(100) NOT NULL
+  last_name VARCHAR(100) NOT NULL
+)
+
+DROP TABLE IF EXISTS games
+CREATE TABLE games (
+  id SERIAL PRIMARY key,
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL,
+  multiplayer BOOLEAN NOT NULL,
+  last_played_at DATE, NOT NULL,
+  author_id INT REFERENCES authors(id)
+)
+
 CREATE INDEX labels_index ON item(label_id);
 CREATE INDEX genres_index ON item(genre_id);
 CREATE INDEX authers_index ON item(author_id)

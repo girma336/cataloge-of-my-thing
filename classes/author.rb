@@ -1,3 +1,5 @@
+require 'date'
+
 class Author
   attr_accessor :first_name, :last_name, :items
   attr_reader :id
@@ -12,5 +14,13 @@ class Author
   def add_item(item)
     @items << item
     item.author = self
+  end
+
+  def to_json(*_args)
+    {
+      'first_name' => @first_name,
+      'last_name' => @last_name,
+      'items' => @items
+    }
   end
 end
