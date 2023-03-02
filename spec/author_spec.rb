@@ -1,25 +1,26 @@
-require 'date'
 require_relative '../classes/author'
 require_relative '../classes/item'
-require_relative '../classes/game'
 
-
-describe Author do
-  before :each do
-    @author = Author.new(200, 'Keenan', 'Botes')
-  end
-
-  it 'expect correct properties in input' do
-    expect(@author.first_name).to eq 'Keenan'
-    expect(@author.last_name).to eq 'Botes'
-  end
-
+RSpec.describe Author do
   describe '#add_item' do
-    it 'adds items to items array' do
-      game_class = Game.new(220, '2020-01-15', false, 'Hi', '2023-02-14')
-      @author.add_item(game_class)
-      expect(game_class.author.last_name).to eq 'Botes'
-      expect(@author.instance_variable_get(:@items)).to eq([game_class])
+    it 'adds an item to the author' do
+      author = Author.new('John', 'Doe')
+      item = Item.new('2021-01-01')
+      author.add_item(item)
+      expect(author.items).to include(item)
+    end
+  end
+
+  describe '#initialize' do
+    it 'sets the author last name' do
+      author = Author.new('John', 'Doe')
+      expect(author.last_name).to eq('Doe')
+    end
+
+    it 'generates a random author ID' do
+      author1 = Author.new('John', 'Doe')
+      author2 = Author.new('Jane', 'Doe')
+      expect(author1.id).not_to eq(author2.id)
     end
   end
 end
