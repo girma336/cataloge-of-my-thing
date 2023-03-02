@@ -1,8 +1,18 @@
+CREATE DATABASE catalog;
+
 DROP TABLE IF EXISTS labels
 CREATE TABLE labels (
   id SERIAL PRIMARY KEY,
   title VARCHAR(200) NOT NULL,
   color VARCHAR(200) NOT NULL
+)
+
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  publisher VARCHAR(200) NOT NULL,
+  cover_state VARCHAR(200) NOT NULL,
+  item_id INT,
+  FOREIGN KEY (item_id) REFERENCES item(id) 
 )
 
 DROP TABLE IF EXISTS genre
@@ -15,6 +25,8 @@ DROP TABLE IF EXISTS musicalbum
 CREATE TABLE musicalbum (
   id SERIAL  PRIMARY key,
   on_spotify BOOLEAN,
+  item_id INT,
+  FOREIGN KEY (item_id) REFERENCES item(id) 
 )
 
 DROP TABLE IF EXISTS item
