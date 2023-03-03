@@ -44,6 +44,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Persentation: [Vedio](https://drive.google.com/drive/folders/1jW4DLUa3p4LqkQ24F-b-hXW1a2ODy8NM?usp=share_link)
 
 <!-- GETTING STARTED -->
 
@@ -93,7 +94,7 @@ Clone this repository to your desired folder:
 
 - GitHub: [Gulalai-Ahmadi](https://github.com/AhmadiGu)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahmadi/)
-- Persentation: [Vedio](https://www.loom.com/share/3e5facd3646744d4b375b6c2b3311c67)
+
 
 👤 **Girma**
 
